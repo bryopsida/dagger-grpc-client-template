@@ -1,6 +1,6 @@
-FROM alpine:3.13 AS build
+FROM debian:buster AS build
 
-RUN apk add openjdk11 --no-cache
+RUN apt-get update && apt-get install openjdk-11-jdk-headless -y
 
 
 WORKDIR /build
